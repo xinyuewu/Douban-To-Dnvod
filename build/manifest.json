@@ -1,0 +1,22 @@
+{
+    "manifest_version": 2,
+
+    "name": "豆瓣to多瑙",
+    "description": "豆瓣-多瑙影院 传送门",
+    "version": "1.0",
+    "icons": {
+        "128": "128.png"
+    },
+
+    "content_scripts": [{
+        "matches": ["*://movie.douban.com/*", "*://www.douban.com/*"],
+        "js": ["show.js"]
+    }],
+    "permissions": [
+        "https://www.dnvod.tv/*"
+    ],
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    }
+}
